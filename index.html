@@ -256,6 +256,11 @@
     return false;
   });
 
+  // 🚨 개발자 도구를 억지로 열었을 때 무한 일시정지(Debugger) 트랩
+  setInterval(function() {
+    debugger;
+  }, 100);
+  
   // 🔗 [설정] 2차시 구글 시트 배포 URL, 탭 이름
   const GOOGLE_SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbymuGKCOqviCjqn3PEab4ubtf_m5cf1Gj184kGTgFqm0nBrOSKX7_oc9V_Wjv73AbGTAA/exec";
   const SHEET_TAB_NAME = "2차시";
